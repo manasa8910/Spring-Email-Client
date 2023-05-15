@@ -16,7 +16,7 @@ public class Consumer {
     @Autowired
     ObjectMapper objectMapper;
 
-    @KafkaListener(topics = "task", groupId = "my-group")  //subscribe to the topic
+    @KafkaListener(topics = "task", groupId = "my-group")  //subscribe to the topic...
     public void consume(String data) throws JsonProcessingException {//spring kafka provided JSonDeserializer will convert User Json object to notificationModal java object
 
         String newline = System.getProperty("line.separator");
